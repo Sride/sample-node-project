@@ -15,6 +15,7 @@ router.get('/', function(req,res){
 });
 
 router.get('/sharks', function(req,res){
+  console.log(req);
   var ipAddress = req.headers['x-forwarded-for'] || req.headers['X-Forwarded-For'] || req.headers['x-real-ip'];
   console.log("x-forwarded-for", req.headers['x-forwarded-for']);
   console.log("X-Forwarded-For", req.headers['X-Forwarded-For']);
